@@ -16,12 +16,25 @@ class Header extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
+      padding: EdgeInsets.only(left:20),
       child: Container(
         width: 1200,
         margin: const EdgeInsets.only(top: 20),
-        child: Column(
+        child: Stack(
           children: [
-            InfoContainer(tamanho: tamanho),
+            Positioned(
+              top: 1,
+              left: 1,
+              child: InfoContainer(tamanho: tamanho)
+              ),
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: Container(
+                constraints: BoxConstraints(maxWidth: 639, maxHeight: 860),
+                child: Image.asset("assets/images/foto_de_perfil_removebg.png"),
+              )
+            ),
           ],
         ),
       ),
@@ -40,12 +53,13 @@ class InfoContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints:  BoxConstraints( maxHeight: tamanho.height * 0.7, minWidth: tamanho.width * 0.7),
+      constraints:  BoxConstraints( maxHeight: tamanho.height * 0.7, maxWidth: 1100),
+      width: double.infinity,
       margin: const EdgeInsets.only(top: 100),
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.only(left:100),
       color: Colors.white.withAlpha(30),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
@@ -56,7 +70,7 @@ class InfoContainer extends StatelessWidget {
             .copyWith(color: Colors.white),
       ),
       const Text(
-        "Pedro\nMesquita",
+        "Pedro G J Mesquita",
         style: TextStyle(
           fontSize: 100,
           fontWeight: FontWeight.bold,
