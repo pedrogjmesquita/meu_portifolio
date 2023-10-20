@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meu_portifolio/pages/sections/about/about.dart';
 import 'package:meu_portifolio/pages/sections/header/header.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,9 +14,13 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             Header(),
+            SizedBox(height: 40),
+            About(),
+
           ],
         ),
       )
     );
   }
 }
+
