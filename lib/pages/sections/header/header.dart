@@ -20,7 +20,7 @@ class Header extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      padding: const EdgeInsets.only(left:20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Container(
         width: 1100,
         margin: const EdgeInsets.only(top: 20),
