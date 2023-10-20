@@ -17,40 +17,34 @@ class InfoContainer extends StatelessWidget {
       padding: const EdgeInsets.only(left:100),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
-        color: Colors.white.withAlpha(30),
-
+        color: Colors.grey.withAlpha(30),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-        "Olá, bem vindo ao meu portifolio!",
-        style: Theme.of(context)
+          "Olá, bem vindo ao meu portifolio!",
+          style: Theme.of(context)
             .textTheme
             .headlineMedium!
             .copyWith(color: Colors.white),
-      ),
-      const Text(
-        "Pedro G J Mesquita",
-        style: TextStyle(
-          fontSize: 100,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-          height: 1.5,
-          fontFamily: "Montserrat",
-
-        ),
-      ),
-      Text(
-        "Estudante de Engenharia da Computação",
-        style: Theme.of(context)
-            .textTheme
-            .headlineMedium!
-            .copyWith(color: Colors.white),
-      )
-
-          ],
+          ),
+          Text(
+            "Pedro\nMesquita",
+            style: Theme.of(context)
+              .textTheme
+              .headlineLarge!
+              .copyWith(color: Colors.white, height: 1.5, fontSize: 100, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            "Estudante de Engenharia\n da Computação",
+            style: Theme.of(context)
+                .textTheme
+                .headlineMedium!
+                .copyWith(color: Colors.white),
+          )
+        ],
       ),
     );
   }

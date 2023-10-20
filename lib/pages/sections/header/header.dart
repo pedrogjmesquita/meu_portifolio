@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'components/info_container.dart';
+import 'components/menu.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -10,6 +11,7 @@ class Header extends StatelessWidget {
     Size tamanho = MediaQuery.of(context).size;
     
     return Container(
+      alignment: Alignment.center,
       constraints: const BoxConstraints(maxHeight: 900, minHeight: 700),
       width: double.infinity,
       decoration: const BoxDecoration(
@@ -26,8 +28,6 @@ class Header extends StatelessWidget {
           children: [
             Positioned(
               top: 0,
-              left: 50,
-              right: 50, 
               child: InfoContainer(tamanho: tamanho)
               ),
             Positioned(
@@ -38,6 +38,10 @@ class Header extends StatelessWidget {
                 child: Image.asset("assets/images/foto_de_perfil_removebg.png"),
               )
             ),
+            const Positioned(
+              bottom: 0,
+              child: Menu(),
+            )
           ],
         ),
       ),
