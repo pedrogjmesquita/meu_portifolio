@@ -9,6 +9,7 @@ class MainWidget extends StatelessWidget {
     return const MaterialApp(
       home: HomePage(),
       debugShowCheckedModeBanner: false,
+      title: 'Pedro G J Mesquita',
     );
   }
 }
