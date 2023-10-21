@@ -12,11 +12,21 @@ class SectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          width: 5,
-          height: 70,
-          color: Colors.black,
-          margin: const EdgeInsets.only(right: 20),
+        Column(
+          children: [
+            Container(
+              width: 5,
+              height: 35,
+              color: Colors.black,
+              margin: const EdgeInsets.only(right: 20),
+            ),
+            Container(
+              width: 5,
+              height: 35,
+              color: Colors.blue,
+              margin: const EdgeInsets.only(right: 20),
+            ),
+          ],
         ),
         Text(
           title,
