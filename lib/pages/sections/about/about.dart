@@ -21,7 +21,7 @@ class About extends StatelessWidget {
         children: [
           SectionTitle(title: AboutTexts.title),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
                 child: AboutText(

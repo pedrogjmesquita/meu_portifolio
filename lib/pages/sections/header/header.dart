@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'components/info_container.dart';
-import 'components/menu.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -38,10 +37,7 @@ class Header extends StatelessWidget {
                 child: Image.asset("assets/images/foto_de_perfil_removebg.png"),
               )
             ),
-            const Positioned(
-              bottom: 0,
-              child: Menu(),
-            )
+
           ],
         ),
       ),
