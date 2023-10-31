@@ -24,8 +24,8 @@ class MenuButtons extends StatelessWidget {
         buttonText,
         style: Theme.of(context)
             .textTheme
-            .headlineMedium!
-            .copyWith(color: Colors.black),
+            .headlineSmall!
+            .copyWith(color: Color.fromRGBO(196, 219, 232, 1)),
       ),
     );
   }

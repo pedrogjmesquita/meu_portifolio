@@ -14,21 +14,19 @@ class Skills extends StatelessWidget {
     "WebScraping",
   ];
   final List<String> javaSkills = [
-    "JDBD",
-    "AWT",
-    "Swing",
-    "JTest",
-    "Socket",
-    "Data Structures"
+    "Implementação de GUIs",
+    "Conecção com Banco de Dados",
+    "Arquiteura de Sockets",
+    "Estudo de Estruturas de Dados",
+    "Testes Unitários"
   ];
   final List<String> cSkils = [
-    "Data Structures",
-    "Algorithms",
-    "Pointers",
-    "SQL Conections"
+    "Estudo de Estruturas de Dados",
+    "Estudo de Algoritmos",
+    "Cenexão com Banco de Dados"
   ];
   final List<String> dartSkills = [
-    "Flutter",
+    "Implementação de GUIs com Flutter",
   ];
 
   @override

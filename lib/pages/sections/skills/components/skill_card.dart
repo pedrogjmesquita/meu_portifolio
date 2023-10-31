@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:meu_portifolio/pages/sections/skills/components/sub_skill.dart';
 
@@ -16,7 +17,7 @@ class SkillCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(maxWidth: 1110),
+      constraints: const BoxConstraints(maxWidth: 1100),
       margin: const EdgeInsets.symmetric(vertical: 20),
       child: Wrap(
           runAlignment: WrapAlignment.start,
@@ -24,16 +25,20 @@ class SkillCard extends StatelessWidget {
           children: [
             Container(
               constraints: const BoxConstraints(maxHeight: 128, maxWidth: 128),
-              height: 128,
               child: Image.asset(skillImage),
             ),
-            Wrap(
-                children: subSkillText
-                    .map((subSkill) => SubSkill(
-                          subSkillText: subSkill,
-                          skillColor: skillColor,
-                        ))
-                    .toList()),
+            Container(
+              constraints: const BoxConstraints(maxWidth: 900),
+              child: Wrap(
+                  runSpacing: 10,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: subSkillText
+                      .map((subSkill) => SubSkill(
+                            subSkillText: subSkill,
+                            skillColor: skillColor,
+                          ))
+                      .toList()),
+            ),
           ]),
     );
   }

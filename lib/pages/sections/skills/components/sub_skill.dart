@@ -13,7 +13,9 @@ class SubSkill extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      constraints: const BoxConstraints(maxWidth: 256, maxHeight: 128),
+      constraints: const BoxConstraints(maxWidth: 256, maxHeight: 80),
+      width: 250,
+      height: 100,
       decoration:  BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(20)),
         border: const Border.fromBorderSide(
@@ -26,7 +28,13 @@ class SubSkill extends StatelessWidget {
       ),
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.all(20),
-      child: Text(subSkillText, style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white),),
+      child: Center(
+        child: Text(
+          subSkillText,
+          style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white),
+          textAlign: TextAlign.center,
+          ),
+      ),
     );
   }
 }
