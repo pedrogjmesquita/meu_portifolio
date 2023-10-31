@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meu_portifolio/pages/components/menu_buttons.dart';
 import 'package:meu_portifolio/pages/sections/about/about.dart';
+import 'package:meu_portifolio/pages/sections/contact/contact.dart';
 import 'package:meu_portifolio/pages/sections/experience/experience.dart';
 import 'package:meu_portifolio/pages/sections/header/header.dart';
 import 'package:meu_portifolio/pages/sections/projects/projects.dart';
@@ -82,7 +83,8 @@ class HomePage extends StatelessWidget {
               Skills(key: skillsKey),
               Experience(key: experienceKey),
               Projects(key: projectsKey),
-              // Contact(key: contactKey),
+              Contact(key: contactKey),
+              const SizedBox(height: 200),
             ],
           ),
         ));
