@@ -8,7 +8,7 @@ class Skills extends StatelessWidget {
   final List<String> pythonSkills = [
     "Implementação de GUIs",
     "Bibliotecas de Machine Learning",
-    "Processamento de Linguágem Natural",
+    "Processamento de Linguagem Natural",
     "Deep Learning e Redes Neurais",
     "Data Visualisation",
     "WebScraping",
@@ -26,13 +26,14 @@ class Skills extends StatelessWidget {
     "Cenexão com Banco de Dados"
   ];
   final List<String> dartSkills = [
-    "Implementação de GUIs com Flutter",
+    "Framework Flutter",
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
       constraints: const BoxConstraints(maxWidth: 1110),
+      margin: const EdgeInsets.symmetric(vertical: 40),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -50,12 +51,12 @@ class Skills extends StatelessWidget {
           SkillCard(
             skillImage: "assets/images/c.png",
             subSkillText: cSkils,
-            skillColor: const Color.fromRGBO(40, 53, 147, 1),
+            skillColor: const Color.fromRGBO(93,107,193, 1),
           ),
           SkillCard(
             skillImage: "assets/images/dart.png",
             subSkillText: dartSkills,
-            skillColor: const Color.fromRGBO(0, 167, 88, 1),
+            skillColor: const Color.fromRGBO(0,210,184, 1),
           ),
         ],
       ),

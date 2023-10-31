@@ -18,12 +18,13 @@ class SkillCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       constraints: const BoxConstraints(maxWidth: 1100),
-      margin: const EdgeInsets.symmetric(vertical: 20),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       child: Wrap(
           runAlignment: WrapAlignment.start,
           crossAxisAlignment: WrapCrossAlignment.center,
           children: [
             Container(
+              margin: const EdgeInsets.only(right: 50),
               constraints: const BoxConstraints(maxHeight: 128, maxWidth: 128),
               child: Image.asset(skillImage),
             ),
