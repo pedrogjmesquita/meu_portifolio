@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meu_portifolio/pages/components/section_title.dart';
 import 'package:meu_portifolio/pages/sections/experience/components/experience_card.dart';
+import 'package:meu_portifolio/pages/sections/experience/components/experience_images.dart';
 import 'package:meu_portifolio/pages/sections/experience/components/experience_texts.dart';
 
 class Experience extends StatelessWidget {
@@ -17,10 +18,10 @@ class Experience extends StatelessWidget {
           Wrap(
             children: [
               ExperienceCard(
-                experienceImage: "assets/images/blackboard.png", 
+                experienceImage: ExperienceImages.monitoria, 
                 experienceText: ExperienceTexts.experienceMonitoria),
                 ExperienceCard(
-                experienceImage: "assets/images/datascience.png", 
+                experienceImage: ExperienceImages.nsee, 
                 experienceText: ExperienceTexts.experienceDataScience),
             ],
           ),

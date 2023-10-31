@@ -3,6 +3,7 @@ import 'package:meu_portifolio/pages/components/menu_buttons.dart';
 import 'package:meu_portifolio/pages/sections/about/about.dart';
 import 'package:meu_portifolio/pages/sections/experience/experience.dart';
 import 'package:meu_portifolio/pages/sections/header/header.dart';
+import 'package:meu_portifolio/pages/sections/projects/projects.dart';
 import 'package:meu_portifolio/pages/sections/skills/skills.dart';
 
 class HomePage extends StatelessWidget {
@@ -79,8 +80,8 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: 40),
               About(key: aboutKey),
               Skills(key: skillsKey),
-              Experience(key: experienceKey)
-              // Projects(key: projectsKey),
+              Experience(key: experienceKey),
+              Projects(key: projectsKey),
               // Contact(key: contactKey),
             ],
           ),

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meu_portifolio/pages/components/section_title.dart';
-import 'package:meu_portifolio/pages/sections/about/components/about_text.dart';
+import 'package:meu_portifolio/pages/sections/about/components/about_card.dart';
 import 'package:meu_portifolio/pages/sections/about/components/about_texts.dart';
-import 'package:meu_portifolio/pages/sections/about/components/pandas_card.dart';
 
 class About extends StatelessWidget {
   const About({super.key});
@@ -20,22 +19,7 @@ class About extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SectionTitle(title: AboutTexts.title),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: AboutText(
-                  texto:AboutTexts.text1
-                  ),
-              ),
-              PandasCard(),
-              Expanded(
-                child: AboutText(
-                  texto:AboutTexts.text2
-                ),
-              )
-            ],
-          )
+          AboutCard(),
         ],
       ),
     );
