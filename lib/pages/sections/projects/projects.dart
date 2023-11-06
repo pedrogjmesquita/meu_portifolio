@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:meu_portifolio/pages/components/section_title.dart';
+import 'package:meu_portifolio/pages/sections/projects/components/projects_card.dart';
 import 'package:meu_portifolio/pages/sections/projects/components/projects_texts.dart';
 
 class Projects extends StatelessWidget {
@@ -13,20 +15,31 @@ class Projects extends StatelessWidget {
       child: Column(
         children: [
           const SectionTitle(title: ProjectsTexts.title),
-          Container(
-            width: 800,
-            height: 800,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              gradient: const LinearGradient(colors: [Color.fromARGB(255,26,41,69), Color.fromARGB(255, 14,25, 44)])
-            ),
-            child: const Center(
-              child: Text("Vitrine de Projetos", style: TextStyle(color: Colors.white, fontSize: 60, fontWeight: FontWeight.bold),),
-          ),
-          )
+          FlutterCarousel(
+              items: const [
+                ProjectsCard(
+                  projectDescription: ProjectsTexts.descriptionBIPY,
+                  projectImage: "assets/images/bipy.png",
+                  projectTitle: ProjectsTexts.titleBIPY,
+                  projectLink: "https://github.com/JoaoVitorBranco/BIPy",
+                ),
+                ProjectsCard(
+                  projectDescription: ProjectsTexts.descriptionRadioJava,
+                  projectImage: "assets/images/radioJava.png",
+                  projectTitle: ProjectsTexts.titleRadioJava,
+                  projectLink:
+                      "https://github.com/pedrogjmesquita/RadioJavaClientServer",
+                ),
+              ],
+              options: CarouselOptions(
+                height: 500,
+                autoPlay: true,
+                autoPlayInterval: const Duration(seconds: 6),
+                autoPlayAnimationDuration: const Duration(milliseconds: 800),
+                autoPlayCurve: Curves.fastOutSlowIn,
+              ))
         ],
       ),
     );
   }
 }
-
