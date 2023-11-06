@@ -42,7 +42,7 @@ class Contact extends StatelessWidget {
                   ContactCard(
                     text: "Baixe o meu currículo",
                     image: "assets/images/cv.png",
-                    url: "https://drive.google.com/file/d/1QZ3Z3Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2/view?usp=sharing"
+                    url: "https://drive.google.com/uc?export=download&id=1mV8V9jcMga9anqBTT4veUKtpu0f6UVv0"
                   ),
                 ],
               ),
