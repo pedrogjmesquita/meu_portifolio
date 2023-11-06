@@ -10,22 +10,24 @@ class Contact extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       constraints: const BoxConstraints(maxWidth: 1100),
-      child: const Column(
+      child:  const Column(
         children: [
           SectionTitle(title: ContactTexts.title),
           Wrap(
             runAlignment: WrapAlignment.spaceBetween,
             children: [
-              Column(
+               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   ContactCard(
                     text: "Me mande um e-mail",
                     image: "assets/images/gmail.png",
+                    url: "https://mail.google.com/mail/?view=cm&fs=1&to=pedro.gjmesquita@gmail.com&su=Resposta%20do%20Portfolio"
                   ),
                   ContactCard(
-                    text: "Visite minha página do GitHub",
+                    text: "Veja meu perfil do GitHub",
                     image: "assets/images/github.png",
+                    url: "https://github.com/pedrogjmesquita"
                   ),
                 ],
               ),
@@ -35,46 +37,17 @@ class Contact extends StatelessWidget {
                   ContactCard(
                     text: "Veja meu perfil no LinkedIn",
                     image: "assets/images/linkedin.png",
+                    url: "https://www.linkedin.com/in/pedro-mesquita-917252258/"
                   ),
                   ContactCard(
                     text: "Baixe o meu currículo",
                     image: "assets/images/cv.png",
+                    url: "https://drive.google.com/file/d/1QZ3Z3Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2Z2/view?usp=sharing"
                   ),
                 ],
               ),
             ],
           )
-          // Column(
-          //   mainAxisAlignment: MainAxisAlignment.start,
-          //   children: [
-          //     Wrap(
-          //       runAlignment: WrapAlignment.start,
-          //       children: [
-          //         ContactCard(
-          //           text: "Me mande um e-mail",
-          //           image: "assets/images/gmail.png",
-          //         ),
-          //         ContactCard(
-          //           text: "Visite minha página do GitHub",
-          //           image: "assets/images/github.png",
-          //         ),
-          //       ],
-          //     ),
-          //     Wrap(
-          //       runAlignment: WrapAlignment.start,
-          //       children: [
-          //         ContactCard(
-          //           text: "Veja meu perfil no LinkedIn",
-          //           image: "assets/images/linkedin.png",
-          //         ),
-          //         ContactCard(
-          //           text: "Baixe o meu currículo",
-          //           image: "assets/images/cv.png",
-          //         ),
-          //       ],
-          //     ),
-          //   ],
-          // ),
         ],
       ),
     );

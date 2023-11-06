@@ -73,6 +73,7 @@ class HomePage extends StatelessWidget {
           ],
           foregroundColor: const Color.fromRGBO(196, 219, 232, 1),
         ),
+
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

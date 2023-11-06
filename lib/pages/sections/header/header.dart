@@ -21,7 +21,7 @@ class Header extends StatelessWidget {
       ),
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Container(
-        width: 1100,
+        constraints: const BoxConstraints(maxWidth: 1100),
         margin: const EdgeInsets.only(top: 20),
         child: Stack(
           children: [

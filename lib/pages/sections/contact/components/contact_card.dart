@@ -6,8 +6,10 @@ class ContactCard extends StatelessWidget {
     super.key,
     required this.text,
     required this.image,
+    required this.url,
     });
 
+  final String url;
   final String image;
   final String text;
 
@@ -21,7 +23,7 @@ class ContactCard extends StatelessWidget {
         children: [
           Text(
             text,
-            style: Theme.of(context).textTheme.headline6!.copyWith(
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
               color: const Color.fromARGB(255, 14,25, 44),
               fontWeight: FontWeight.bold,
               fontSize: 20,
@@ -29,7 +31,7 @@ class ContactCard extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 20,),
-          ContactButton(image: image,),
+          ContactButton(image: image, url: url),
         ],
       ),
     );
