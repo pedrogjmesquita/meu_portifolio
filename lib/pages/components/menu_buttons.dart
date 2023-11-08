@@ -9,26 +9,23 @@ class MenuButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: ElevatedButton(
-        onPressed: () {
-          scrollFunction();
-        },
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.grey.withAlpha(0),
-          elevation: 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
+    return ElevatedButton(
+      onPressed: () {
+        scrollFunction();
+      },
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
         ),
-        child: Text(
-          buttonText,
-          style: Theme.of(context)
-              .textTheme
-              .headlineSmall!
-              .copyWith(color: const Color.fromRGBO(196, 219, 232, 1)),
-        ),
+      ),
+      child: Text(
+        buttonText,
+        style: Theme.of(context)
+            .textTheme
+            .headlineSmall!
+            .copyWith(color: const Color.fromRGBO(196, 219, 232, 1)),
       ),
     );
   }

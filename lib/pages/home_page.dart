@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meu_portifolio/breakpoints.dart';
 import 'package:meu_portifolio/pages/components/menu_buttons.dart';
+import 'package:meu_portifolio/pages/components/tablet_app_bar.dart';
+import 'package:meu_portifolio/pages/components/web_app_bar.dart';
 import 'package:meu_portifolio/pages/sections/about/about.dart';
 import 'package:meu_portifolio/pages/sections/contact/contact.dart';
 import 'package:meu_portifolio/pages/sections/experience/experience.dart';
@@ -17,9 +20,10 @@ class HomePage extends StatelessWidget {
   final contactKey = GlobalKey();
   final homeKey = GlobalKey();
 
-  Future scrollToHome() async{
+  Future scrollToHome() async {
     await Scrollable.ensureVisible(homeKey.currentContext!,
-        duration: const Duration(milliseconds: 700));}
+        duration: const Duration(milliseconds: 700));
+  }
 
   Future scrollToAbout() async {
     await Scrollable.ensureVisible(aboutKey.currentContext!,
@@ -48,46 +52,47 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: IconButton(
-            icon: const Icon(Icons.home),
-            onPressed: scrollToHome,
-          ),
-          flexibleSpace: Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Color.fromARGB(255,26,41,69), Color.fromARGB(255, 14,25, 44)] 
+    return LayoutBuilder(builder: (context, constraints) {
+      return Scaffold(
+          appBar: constraints.maxWidth > tabletBreakpoint
+              ? PreferredSize(
+                  preferredSize: const Size(double.infinity, 60),
+                  child: WebAppBar(
+                    scrollToHome: scrollToHome,
+                    scrollToAbout: scrollToAbout,
+                    scrollToSkills: scrollToSkills,
+                    scrollToExperience: scrollToExperience,
+                    scrollToProjects: scrollToProjects,
+                    scrollToContact: scrollToContact,
+                  ),
                 )
+              : constraints.maxWidth > mobileBreakpoint
+                  ? PreferredSize(
+                      preferredSize: const Size(double.infinity, 56),
+                      child: TabletAppBar(
+                        scrollToHome: scrollToHome,
+                        scrollToAbout: scrollToAbout,
+                        scrollToSkills: scrollToSkills,
+                        scrollToExperience: scrollToExperience,
+                        scrollToProjects: scrollToProjects,
+                        scrollToContact: scrollToContact,
+                      ))
+                  : null,
+          body: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Header(key: homeKey),
+                const SizedBox(height: 40),
+                About(key: aboutKey),
+                Skills(key: skillsKey),
+                Experience(key: experienceKey),
+                Projects(key: projectsKey),
+                Contact(key: contactKey),
+                const SizedBox(height: 200),
+              ],
             ),
-          ),
-          elevation: 30,
-          shadowColor: Colors.black,
-          centerTitle: true,
-          actions: [
-            MenuButtons(scrollFunction: scrollToAbout, buttonText: "Sobre"),
-            MenuButtons(scrollFunction: scrollToSkills, buttonText: "Habilidades"),
-            MenuButtons(scrollFunction: scrollToExperience, buttonText: "Experiência"),
-            MenuButtons(scrollFunction: scrollToProjects, buttonText: "Projetos"),
-            MenuButtons(scrollFunction: scrollToContact, buttonText: "Contato"),
-          ],
-          foregroundColor: const Color.fromRGBO(196, 219, 232, 1),
-        ),
-
-        body: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Header(key: homeKey),
-              const SizedBox(height: 40),
-              About(key: aboutKey),
-              Skills(key: skillsKey),
-              Experience(key: experienceKey),
-              Projects(key: projectsKey),
-              Contact(key: contactKey),
-              const SizedBox(height: 200),
-            ],
-          ),
-        ));
+          ));
+    });
   }
 }
