@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:meu_portifolio/breakpoints.dart';
-import 'package:meu_portifolio/pages/components/menu_buttons.dart';
 import 'package:meu_portifolio/pages/components/tablet_app_bar.dart';
 import 'package:meu_portifolio/pages/components/web_app_bar.dart';
 import 'package:meu_portifolio/pages/sections/about/about.dart';

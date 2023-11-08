@@ -7,13 +7,15 @@ class ProjectsCard extends StatelessWidget {
       required this.projectDescription,
       required this.projectImage,
       required this.projectTitle,
-      required this.projectLink
+      required this.projectLink,
+      required this.maxDefinedWidth
       });
 
   final String projectDescription;
   final String projectImage;
   final String projectTitle;
   final String projectLink;
+  final double maxDefinedWidth;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class ProjectsCard extends StatelessWidget {
             bottom: 20,
             left: 20,
             child: Container(
-                constraints: const BoxConstraints(maxWidth: 500),
+                constraints: BoxConstraints(maxWidth: maxDefinedWidth/2),
                 decoration: BoxDecoration(
                   color: Colors.grey,
                   borderRadius: BorderRadius.circular(20),
