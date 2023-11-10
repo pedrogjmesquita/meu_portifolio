@@ -15,7 +15,7 @@ class Experience extends StatelessWidget {
           ? 1100
           : (constraints.maxWidth > mobileBreakpoint)
               ? 700
-              : 450);
+              : 400);
       return Container(
         constraints: BoxConstraints(maxWidth: maxDefinedWidth),
         margin: const EdgeInsets.symmetric(vertical: 40),

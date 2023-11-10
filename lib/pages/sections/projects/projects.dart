@@ -47,6 +47,11 @@ class Projects extends StatelessWidget {
                   autoPlayInterval: const Duration(seconds: 6),
                   autoPlayAnimationDuration: const Duration(milliseconds: 800),
                   autoPlayCurve: Curves.fastOutSlowIn,
+                  slideIndicator: const CircularSlideIndicator(
+                    indicatorBackgroundColor:
+                        Color.fromARGB(127, 158, 158, 158),
+                    currentIndicatorColor: Color.fromARGB(138, 33, 149, 243),
+                  ),
                 ))
           ],
         ),

@@ -8,24 +8,21 @@ class AboutCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Expanded(
-                child: AboutText(
-                  texto:AboutTexts.text1
-                  ),
-              ),
-              Container(
-                constraints: const BoxConstraints(maxWidth: 256, maxHeight: 256),
-                child: Image.asset(AboutImages.pandasImage)
-                ),
-              const Expanded(
-                child: AboutText(
-                  texto:AboutTexts.text2
-                ),
-              )
-            ],
-          );
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        const Expanded(
+          flex: 0,
+          child: AboutText(texto: AboutTexts.text1),
+        ),
+        Container(
+            constraints: const BoxConstraints(maxWidth: 256, maxHeight: 256),
+            child: Image.asset(AboutImages.pandasImage)),
+        const Expanded(
+          flex: 0,
+          child: AboutText(texto: AboutTexts.text2),
+        )
+      ],
+    );
   }
 }
