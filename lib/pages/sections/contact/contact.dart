@@ -14,7 +14,9 @@ class Contact extends StatelessWidget {
       return Container(
         constraints: constraints.maxWidth > tabletBreakpoint
             ? const BoxConstraints(maxWidth: 1100)
-            : const BoxConstraints(maxWidth: 700),
+            : constraints.maxWidth > mobileBreakpoint
+                ? const BoxConstraints(maxWidth: 700)
+                : const BoxConstraints(maxWidth: 300),
         child: const Column(
           children: [
             SectionTitle(title: ContactTexts.title),

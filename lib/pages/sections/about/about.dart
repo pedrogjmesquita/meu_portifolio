@@ -14,7 +14,7 @@ class About extends StatelessWidget {
           ? 1100
           : (constraints.maxWidth > mobileBreakpoint)
               ? 700
-              : 400);
+              : 300);
       return Container(
         margin: const EdgeInsets.symmetric(vertical: 40),
         constraints: BoxConstraints(maxWidth: maxDefinedWidth),

@@ -17,11 +17,11 @@ class SkillCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      return constraints.maxWidth > tabletBreakpoint
+      return constraints.maxWidth > (tabletBreakpoint - 101)
           ? Container(
               margin: const EdgeInsets.symmetric(vertical: 10),
               child: Wrap(
-                  runAlignment: WrapAlignment.start,
+                  runAlignment: WrapAlignment.center,
                   crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
                     Container(
@@ -48,7 +48,7 @@ class SkillCard extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.only(bottom: 50),
                     constraints:
-                        const BoxConstraints(maxHeight: 128, maxWidth: 128),
+                        const BoxConstraints(maxHeight: 100, maxWidth: 100),
                     child: Image.asset(skillImage),
                   ),
                   Container(
@@ -64,6 +64,7 @@ class SkillCard extends StatelessWidget {
                             .toList()),
                   ),
                 ]);
+
     });
   }
 }

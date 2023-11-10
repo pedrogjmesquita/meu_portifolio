@@ -15,7 +15,7 @@ class Projects extends StatelessWidget {
           ? 1100
           : (constraints.maxWidth > mobileBreakpoint)
               ? 700
-              : 450);
+              : 300);
 
       return Container(
         margin: const EdgeInsets.symmetric(vertical: 40),
@@ -44,7 +44,7 @@ class Projects extends StatelessWidget {
                 options: CarouselOptions(
                   height: 500,
                   autoPlay: true,
-                  autoPlayInterval: const Duration(seconds: 6),
+                  autoPlayInterval: const Duration(seconds: 10),
                   autoPlayAnimationDuration: const Duration(milliseconds: 800),
                   autoPlayCurve: Curves.fastOutSlowIn,
                   slideIndicator: const CircularSlideIndicator(

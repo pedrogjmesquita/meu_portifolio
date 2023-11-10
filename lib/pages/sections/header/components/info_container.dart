@@ -69,7 +69,7 @@ class InfoContainer extends StatelessWidget {
                     "Pedro\nMesquita",
                     style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                         color: Colors.white,
-                        fontSize: 760,
+                        fontSize: 100,
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
