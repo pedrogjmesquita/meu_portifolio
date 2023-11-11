@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meu_portifolio/breakpoints.dart';
+import 'package:meu_portifolio/pages/sections/header/components/info_container_mobile.dart';
 
 import 'components/info_container.dart';
 
@@ -41,37 +42,69 @@ class Header extends StatelessWidget {
                 ),
               ),
             )
-          : Container(
-              alignment: Alignment.center,
-              constraints: const BoxConstraints(
-                maxHeight: 800,
-              ),
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/background.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Container(
-                constraints: const BoxConstraints(maxWidth: 700),
-                margin: const EdgeInsets.only(top: 20),
-                child: Stack(
-                  children: [
-                    const Positioned(top: 50, child: InfoContainer()),
-                    Positioned(
-                        bottom: 0,
-                        right: -0,
-                        child: Container(
-                          constraints: const BoxConstraints(maxWidth: 280),
-                          child: Image.asset(
-                              "assets/images/foto_de_perfil_removebg.png"),
-                        )),
-                  ],
-                ),
-              ),
-            );
+          : constraints.maxWidth > mobileBreakpoint
+              ? Container(
+                  alignment: Alignment.center,
+                  constraints: const BoxConstraints(
+                    maxHeight: 800,
+                  ),
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/background.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    constraints: const BoxConstraints(maxWidth: 700),
+                    margin: const EdgeInsets.only(top: 20),
+                    child: Stack(
+                      children: [
+                        const Positioned(top: 50, child: InfoContainer()),
+                        Positioned(
+                            bottom: 0,
+                            right: -0,
+                            child: Container(
+                              constraints: const BoxConstraints(maxWidth: 280),
+                              child: Image.asset(
+                                  "assets/images/foto_de_perfil_removebg.png"),
+                            )),
+                      ],
+                    ),
+                  ),
+                )
+              : Container(
+                  alignment: Alignment.center,
+                  constraints: const BoxConstraints(
+                    maxHeight: 800,
+                  ),
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/background.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    constraints: const BoxConstraints(maxWidth: 700),
+                    margin: const EdgeInsets.only(top: 20),
+                    child: Stack(
+                      children: [
+                        const Positioned(top: 50, child: InfoContainerMobile()),
+                        Positioned(
+                            bottom: 0,
+                            right: -0,
+                            child: Container(
+                              constraints: const BoxConstraints(maxWidth: 280),
+                              child: Image.asset(
+                                  "assets/images/foto_de_perfil_removebg.png"),
+                            )),
+                      ],
+                    ),
+                  ),
+                );
     });
   }
 }
