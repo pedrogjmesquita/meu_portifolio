@@ -30,21 +30,14 @@ class ExperienceCard extends StatelessWidget {
                     child: Image.asset(experienceImage),
                   ),
                   Expanded(
-                    child: Text(experienceText1,
+                    child: Text(experienceText1+experienceText2,
                         style: const TextStyle(
                             fontWeight: FontWeight.w200,
                             color: Color.fromARGB(255, 10, 9, 9),
                             height: 2,
                             fontSize: 20)),
                   ),
-                  Expanded(
-                    child: Text(experienceText2,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w200,
-                            color: Color.fromARGB(255, 10, 9, 9),
-                            height: 2,
-                            fontSize: 20)),
-                  ),
+
                 ],
               ))
           : Container(

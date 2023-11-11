@@ -18,7 +18,7 @@ class InfoContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Olá, bem vindo ao meu portfolio!",
+            "Olá, bem-vindo ao meu portfólio!",
             style: Theme.of(context)
                 .textTheme
                 .headlineMedium!

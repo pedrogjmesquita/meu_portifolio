@@ -5,8 +5,8 @@ class ExperienceTexts {
       "Computação no Instituto Mauá de Tecnologia, onde também sou monitor de ";
   static const String experienceMonitoria2 =
       "Cálculo I há 2 anos. Sou responsável por lecionar aulas semanais de "
-      "resolução de exercícios, além de aulas especias com mais de 100 alunos.";
-  static const String experienceDataScience1=
+      "resolução de exercícios, além de aulas especiais com mais de 100 alunos.";
+  static const String experienceDataScience1 =
       "Em um âmbito mais profissional, estou no Núcleo de Sistemas Eletrônicos "
       "Embarcados (NSEE) dentro do IMT, onde desenvolvo projetos para a área de "
       "Ciência de Dados e Inteligência Artificial. Atualmente, a área está ";
